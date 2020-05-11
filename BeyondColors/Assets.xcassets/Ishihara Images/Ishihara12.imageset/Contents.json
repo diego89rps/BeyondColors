@@ -2,16 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "Ishihara Plate 12-38.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Captura-de-Tela-2014-06-26-às-23.20.00.png",
+      "filename" : "Ishihara Plate 12-39.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Captura-de-Tela-2014-06-26-às-23.20.00-1.png",
+      "filename" : "Ishihara Plate 12-40.png",
       "scale" : "3x"
     }
   ],

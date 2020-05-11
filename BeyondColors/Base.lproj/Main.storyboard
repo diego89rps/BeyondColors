@@ -16,10 +16,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HCl-3I-kZM">
-                                <rect key="frame" x="87" y="279" width="240" height="128"/>
+                                <rect key="frame" x="87" y="481" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ishihara02" translatesAutoresizingMaskIntoConstraints="NO" id="Q6d-O0-Un1">
+                                <rect key="frame" x="61" y="150" width="299" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -30,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1309" y="370"/>
+            <point key="canvasLocation" x="-1310.144927536232" y="369.64285714285711"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="dS8-hG-Wmb">
@@ -78,4 +82,7 @@
             <point key="canvasLocation" x="-481" y="370"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Ishihara02" width="116.5" height="116.5"/>
+    </resources>
 </document>

@@ -11,11 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var testColor: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        testColor.backgroundColor = createColor(colorName: .blue)
-        
+        let b =  ColorViewModel.init()
+        testColor.backgroundColor = b.createColor(colorName: .blue)
     }
 }
-
