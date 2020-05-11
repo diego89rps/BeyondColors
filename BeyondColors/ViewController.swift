@@ -9,14 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var btnNewTest: UIButton!
     
+    @IBOutlet weak var testColor: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        testColor.backgroundColor = createColor(colorName: .blue)
+        
     }
-
-
 }
 
