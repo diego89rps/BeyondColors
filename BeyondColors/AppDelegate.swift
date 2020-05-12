@@ -5,13 +5,28 @@
 //  Created by Diego Ribeiro on 09/05/20.
 //  Copyright © 2020 Diego Ribeiro. All rights reserved.
 //
-
+import Foundation
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-//teste
 
+//    var coordinator: MainCoordinator?
+//    var window: UIWindow?
+//    
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//
+//        let nvController = UINavigationController()
+//
+//        coordinator = MainCoordinator(navigationController: nvController)
+//        coordinator?.start()
+//
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.rootViewController = nvController
+//        window?.makeKeyAndVisible()
+//
+//        return true
+//    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
