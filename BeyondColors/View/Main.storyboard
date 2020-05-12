@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="5wf-5l-BhR">
             <objects>
-                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uW8-Ak-x5O" customClass="ViewController" customModule="BeyondColors" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="uW8-Ak-x5O" customClass="ViewController" customModule="BeyondColors" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lht-zH-3Lt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="btnIshiharaTest:" destination="uW8-Ak-x5O" eventType="touchUpInside" id="pa6-xJ-skW"/>
+                                    <action selector="btnIshiharaTest:" destination="uW8-Ak-x5O" eventType="touchUpInside" id="HkN-2s-I6z"/>
                                 </connections>
                             </button>
                         </subviews>

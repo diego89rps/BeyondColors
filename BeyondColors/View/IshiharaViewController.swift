@@ -10,7 +10,7 @@ import UIKit
 
 class IshiharaViewController: UIViewController, Storyboarded {
     weak var coordinator: MainCoordinator?
-    
+
     var answers : [String] = []
     var offSet : Int = 0
     
@@ -55,6 +55,7 @@ class IshiharaViewController: UIViewController, Storyboarded {
             btnAnswerOne.setTitle("1", for: .normal)
             btnAnswerTwo.setTitle("1", for: .normal)
             btnAnswerTree.setTitle("1", for: .normal)
+
         case 2:
             IshiharaImageTest.image = #imageLiteral(resourceName: "Ishihara12")
             btnAnswerOne.setTitle("2", for: .normal)
@@ -76,7 +77,7 @@ class IshiharaViewController: UIViewController, Storyboarded {
             btnAnswerTwo.setTitle("5", for: .normal)
             btnAnswerTree.setTitle("5", for: .normal)
         default:
-            IshiharaImageTest.image = #imageLiteral(resourceName: "Ishihara01")
+            coordinator?.goToMainViewController()
         }
         
         offSet += 1

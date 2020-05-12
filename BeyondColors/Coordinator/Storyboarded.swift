@@ -15,23 +15,12 @@ protocol Storyboarded {
 
 extension Storyboarded where Self: UIViewController {
     static func instantiate(_ storyboard: String, id: String) -> Self {
-
-        // load our storyboard
         let storyboard = UIStoryboard(name: storyboard, bundle: Bundle.main)
-
-        // instantiate a view controller with that identifier, and force cast as the type that was requested
-        return storyboard.instantiateViewController(withIdentifier: id) as! Self
+        if let instance = storyboard.instantiateViewController(withIdentifier: id) as? Self {
+            return instance
+        } else {
+            fatalError("Failed to instantiate View Controller")
+        }
     }
 }
-
-//extension Storyboarded where Self: UIViewController {
-//    static func instantiate() -> Self {
-//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-//        if let instance = storyboard.instantiateViewController(withIdentifier: "Main") as? Self {
-//            return instance
-//        } else {
-//            fatalError("Failed to instantiate View Controller")
-//        }
-//    }
-//}
 

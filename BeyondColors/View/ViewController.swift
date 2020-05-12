@@ -11,15 +11,13 @@ import UIKit
 class ViewController: UIViewController, Storyboarded {
     weak var coordinator: MainCoordinator?
 
-    @IBAction func btnIshiharaTest(_ sender: Any) {
-        let newViewController = IshiharaViewController()
-        self.navigationController?.pushViewController(newViewController, animated: true)
-            // coordinator?.goToIshiharaViewController()
-        print("aqio")
+    @IBAction func btnIshiharaTest(_ sender: UIButton) {
+        coordinator?.goToIshiharaViewController()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
 }
