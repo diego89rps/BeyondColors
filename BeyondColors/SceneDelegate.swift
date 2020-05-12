@@ -11,15 +11,34 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var appCoordinator: MainCoordinator!
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+            // 1 Verifique se a cena que está sendo transmitida pode ser reduzida para a UIWindowScene.
+           guard let windowScene = (scene as? UIWindowScene) else {
+               return
+           }
+           
+           // 2 Crie um UIWindowe atribua a UIWindowSceneele.
+           let appWindow = UIWindow(frame: windowScene.coordinateSpace.bounds)
+           appWindow.windowScene = windowScene
+           
+           // 3  Execute a manutenção padrão da inicialização do controlador de navegação inicial. Passe isso ao coordenador do aplicativo e ligue start()para o coordenador do aplicativo.
+           let navController = UINavigationController()
+           appCoordinator = MainCoordinator(navigationController: navController)
+           appCoordinator.start()
+
+           // 4 Defina o controlador de navegação como a visualização raiz da janela. Torne a janela do aplicativo visível.
+           appWindow.rootViewController = navController
+           appWindow.makeKeyAndVisible()
+           
+           // 5 Defina a windowpropriedade que você criou anteriormente.
+
+           window = appWindow
+       // guard let _ = (scene as? UIWindowScene) else { return }
     }
-//ll
+
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
