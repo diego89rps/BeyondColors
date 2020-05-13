@@ -14,7 +14,9 @@ struct Constants {
         
         static let mainStoryboard = "Main"
         
-        static let ishiharaStoryboard = "Ishihara"
+        static let ishiharaStoryboard = "IshiharaTest"
+        
+        static let ishiharaResultStoryboard = "IshiharaResult"
         
     }
     
@@ -23,7 +25,9 @@ struct Constants {
         
         static let main = "Main"
         
-        static let ishihara = "Ishihara"
+        static let ishihara = "IshiharaTest"
+        
+        static let ishiharaResult = "IshiharaResult"
 
     }
 }

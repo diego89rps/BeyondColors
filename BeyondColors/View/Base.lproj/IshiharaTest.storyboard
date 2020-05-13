@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Ishihara View Controller-->
+        <!--Ishihara Test View Controller-->
         <scene sceneID="3RY-Ry-M40">
             <objects>
-                <viewController storyboardIdentifier="Ishihara" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3bN-uR-Plf" customClass="IshiharaViewController" customModule="BeyondColors" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IshiharaTest" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3bN-uR-Plf" customClass="IshiharaTestViewController" customModule="BeyondColors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GeI-Z5-iTO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

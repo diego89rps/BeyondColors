@@ -21,16 +21,24 @@ class MainCoordinator: Coordinator {
         goToMainViewController()
     }
     
+    func goToMainViewController() {
+        let vc = ViewController.instantiate(Constants.Storyboard.mainStoryboard, id: Constants.Id.main)
+        vc.coordinator = self
+        navigationController.isNavigationBarHidden = true
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func goToIshiharaViewController() {
-        let vc = IshiharaViewController.instantiate(Constants.Storyboard.ishiharaStoryboard, id: Constants.Id.ishihara)
+        let vc = IshiharaTestViewController.instantiate(Constants.Storyboard.ishiharaStoryboard, id: Constants.Id.ishihara)
         vc.coordinator = self
         navigationController.isNavigationBarHidden = true
         self.navigationController.pushViewController(vc, animated: true)
     }
     
-    func goToMainViewController() {
-        let vc = ViewController.instantiate(Constants.Storyboard.mainStoryboard, id: Constants.Id.main)
+    func goToIshiharaResultViewController(sender : IshiharaTestViewModel) {
+        let vc = IshiharaResultViewController.instantiate(Constants.Storyboard.ishiharaResultStoryboard, id: Constants.Id.ishiharaResult)
         vc.coordinator = self
+        vc.vm = sender
         navigationController.isNavigationBarHidden = true
         navigationController.pushViewController(vc, animated: true)
     }
