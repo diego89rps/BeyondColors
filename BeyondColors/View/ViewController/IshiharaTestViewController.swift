@@ -19,7 +19,7 @@ class IshiharaTestViewController: UIViewController, Storyboarded {
     @IBOutlet weak var btnAnswerOne: UIButton!
     @IBOutlet weak var btnAnswerTwo: UIButton!
     @IBOutlet weak var btnAnswerTree: UIButton!
-    
+
     @IBAction func answerOne(_ sender: UIButton) {
         vm.testAnswer(btnNum : 1, sender : sender)
         setPage(numPage: offSet)
@@ -40,7 +40,7 @@ class IshiharaTestViewController: UIViewController, Storyboarded {
             btnAnswerOne.layer.cornerRadius = 34
             btnAnswerTwo.layer.cornerRadius = 34
             btnAnswerTree.layer.cornerRadius = 34
-
+            
             setPage(numPage: offSet)
     }
     
@@ -48,7 +48,14 @@ class IshiharaTestViewController: UIViewController, Storyboarded {
 
         if numPage <= 3 {
             vm.page(numPage: numPage)
-            IshiharaImageTest.image = vm.getImage()
+            
+            UIView.transition(with: self.IshiharaImageTest,
+                              duration: 0.7,
+                              options: .transitionCrossDissolve,
+                              animations: {
+                                self.IshiharaImageTest.image = self.vm.getImage()
+            }, completion: nil)
+            
             btnAnswerOne.setTitle(vm.getBtnOne(), for: .normal)
             btnAnswerTwo.setTitle(vm.getBtnTwo(), for: .normal)
             btnAnswerTree.setTitle(vm.getBtnTree(), for: .normal)
