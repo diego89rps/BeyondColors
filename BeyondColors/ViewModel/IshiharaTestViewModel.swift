@@ -11,8 +11,10 @@ import UIKit
 
 class IshiharaTestViewModel {
     
-   private var newScene : Ishihara.IshirahaTest?
-   private var corretAnswers : [String] = []
+    private var newScene : Ishihara.IshirahaTest?
+    private var corretAnswers : [String] = []
+    private var allAnswers : [String] = []
+    private var redGreen : Bool = false
     
     func page(numPage : Int) {
         
@@ -55,6 +57,8 @@ class IshiharaTestViewModel {
             case 16:
                 newScene = Ishihara.IshirahaTest.init(image: UIImage(named: Ishihara.IshirahaTestImages.image17)!, btn1: "4", btn2: "2", btn3: "42", correct: 4)
             //protan 2 deutan 4
+            
+
             default:break
         }
     }
@@ -87,5 +91,21 @@ class IshiharaTestViewModel {
         if btnNum == getCorrect(){
             corretAnswers.append(sender.currentTitle!)
         }
+        allAnswers.append(sender.currentTitle!)
+    }
+    
+    func getTextResult() -> String{
+
+        if allAnswers[13].description == "5" &&
+            self.allAnswers[14].description == "45" {
+            return "É possível que você tenha um distúrbio de percepção do vermelho e do verde. Recomendamos que faça um teste profissional com o seu oculista ou oftalmologista."
+        }
+        else if corretAnswers.count < 11 {
+            return "É possível que você tenha um distúrbio na percepção de cores. Recomendamos que faça um teste profissional com o seu oculista ou oftalmologista."
+        }
+        else{
+            return "Aparentemente você não tem distúrbio na percepção de cores. Repita o teste regularmente para monitorar sua percepção de cores ou procure um oculista ou oftalmologista."
+        }
+
     }
 }

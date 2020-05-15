@@ -15,61 +15,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ishihara01" translatesAutoresizingMaskIntoConstraints="NO" id="m6R-Ac-dY6">
-                                <rect key="frame" x="20" y="157" width="374" height="289"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ishihara01" translatesAutoresizingMaskIntoConstraints="NO" id="m6R-Ac-dY6">
+                                <rect key="frame" x="20" y="154" width="374" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="CyM-hS-igu"/>
+                                </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="f5Y-S0-6Je">
-                                <rect key="frame" x="87" y="495" width="240" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5Y-S0-6Je">
+                                <rect key="frame" x="40" y="494" width="334" height="125"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="rvv-GA-WiK"/>
+                                </constraints>
                                 <string key="text">Olhe para a figura e tente reconhecer os números. Em seguida, escolha entre as possíveis respostas:
 </string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iy1-2z-rgZ">
-                                <rect key="frame" x="52" y="708" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="12" backgroundImage="circle.fill" catalog="system">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="answerOne:" destination="3bN-uR-Plf" eventType="touchUpInside" id="qjW-E3-jWR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byh-Gy-sTF">
-                                <rect key="frame" x="292" y="708" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="0" backgroundImage="circle.fill" catalog="system">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="answerTree:" destination="3bN-uR-Plf" eventType="touchUpInside" id="g7u-Ce-2Ar"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLu-7G-Q45">
-                                <rect key="frame" x="171" y="708" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="14" backgroundImage="circle.fill" catalog="system">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="answerTwo:" destination="3bN-uR-Plf" eventType="touchUpInside" id="vHh-yu-b53"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XLo-RU-cOO">
+                                <rect key="frame" x="35" y="652" width="344" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iy1-2z-rgZ">
+                                        <rect key="frame" x="0.0" y="1" width="101.5" height="57.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="12" backgroundImage="rectangle" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerOne:" destination="3bN-uR-Plf" eventType="touchUpInside" id="qjW-E3-jWR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLu-7G-Q45">
+                                        <rect key="frame" x="121.5" y="1" width="101" height="57.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="14" backgroundImage="rectangle" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerTwo:" destination="3bN-uR-Plf" eventType="touchUpInside" id="vHh-yu-b53"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byh-Gy-sTF">
+                                        <rect key="frame" x="242.5" y="1" width="101.5" height="57.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="0" backgroundImage="rectangle" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="answerTree:" destination="3bN-uR-Plf" eventType="touchUpInside" id="g7u-Ce-2Ar"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="TiZ-Q7-ZNy"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Rl1-mG-j5q" firstAttribute="bottom" secondItem="XLo-RU-cOO" secondAttribute="bottom" constant="150" id="02t-xi-AEG"/>
+                            <constraint firstItem="Rl1-mG-j5q" firstAttribute="trailing" secondItem="m6R-Ac-dY6" secondAttribute="trailing" constant="20" id="05R-hK-yBo"/>
+                            <constraint firstItem="f5Y-S0-6Je" firstAttribute="top" secondItem="m6R-Ac-dY6" secondAttribute="bottom" constant="40" id="529-TV-h9r"/>
+                            <constraint firstItem="XLo-RU-cOO" firstAttribute="leading" secondItem="Rl1-mG-j5q" secondAttribute="leading" constant="35" id="7ru-b0-bu9"/>
+                            <constraint firstItem="Rl1-mG-j5q" firstAttribute="trailing" secondItem="XLo-RU-cOO" secondAttribute="trailing" constant="35" id="Vvl-Tf-4PS"/>
+                            <constraint firstItem="m6R-Ac-dY6" firstAttribute="leading" secondItem="Rl1-mG-j5q" secondAttribute="leading" constant="20" id="dqe-19-gx4"/>
+                            <constraint firstItem="f5Y-S0-6Je" firstAttribute="leading" secondItem="Rl1-mG-j5q" secondAttribute="leading" constant="40" id="k4t-tl-75h"/>
+                            <constraint firstItem="m6R-Ac-dY6" firstAttribute="top" secondItem="Rl1-mG-j5q" secondAttribute="top" constant="110" id="lk1-CG-HHp"/>
+                            <constraint firstItem="Rl1-mG-j5q" firstAttribute="trailing" secondItem="f5Y-S0-6Je" secondAttribute="trailing" constant="40" id="uan-YU-t2I"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Rl1-mG-j5q"/>
                     </view>
                     <connections>
@@ -82,11 +102,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zI6-PN-wTX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2299" y="319"/>
+            <point key="canvasLocation" x="-2300" y="318.75"/>
         </scene>
     </scenes>
     <resources>
         <image name="Ishihara01" width="116.5" height="116.5"/>
-        <image name="circle.fill" catalog="system" width="64" height="60"/>
+        <image name="rectangle" catalog="system" width="64" height="46"/>
     </resources>
 </document>

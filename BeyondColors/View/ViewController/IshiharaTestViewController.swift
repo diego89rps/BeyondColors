@@ -37,16 +37,13 @@ class IshiharaTestViewController: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-            btnAnswerOne.layer.cornerRadius = 34
-            btnAnswerTwo.layer.cornerRadius = 34
-            btnAnswerTree.layer.cornerRadius = 34
             
             setPage(numPage: offSet)
     }
     
     func setPage(numPage : Int){
 
-        if numPage <= 3 {
+        if numPage <= 14 {
             vm.page(numPage: numPage)
             
             UIView.transition(with: self.IshiharaImageTest,

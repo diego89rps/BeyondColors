@@ -15,23 +15,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rt6-8g-qqG">
-                                <rect key="frame" x="49" y="600" width="316" height="111"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rt6-8g-qqG">
+                                <rect key="frame" x="15" y="652" width="384" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="JNt-qv-0Eq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Teste Ishihara" backgroundImage="rectangle" catalog="system">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Iniciar Ishihara Teste">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="btnIshiharaTest:" destination="uW8-Ak-x5O" eventType="touchUpInside" id="HkN-2s-I6z"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoBCI" translatesAutoresizingMaskIntoConstraints="NO" id="SMc-tw-W0D">
+                                <rect key="frame" x="58" y="304" width="298" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="wUc-A3-vKN"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rt6-8g-qqG" firstAttribute="leading" secondItem="Q82-na-bhY" secondAttribute="leading" constant="15" id="CZw-uA-0cW"/>
+                            <constraint firstItem="Q82-na-bhY" firstAttribute="trailing" secondItem="SMc-tw-W0D" secondAttribute="trailing" constant="58" id="GL5-ai-Ufe"/>
+                            <constraint firstItem="Q82-na-bhY" firstAttribute="bottom" secondItem="rt6-8g-qqG" secondAttribute="bottom" constant="150" id="MJJ-6M-zGb"/>
+                            <constraint firstItem="SMc-tw-W0D" firstAttribute="leading" secondItem="Q82-na-bhY" secondAttribute="leading" constant="58" id="Mvq-mN-XRH"/>
+                            <constraint firstItem="SMc-tw-W0D" firstAttribute="top" secondItem="Q82-na-bhY" secondAttribute="top" constant="260" id="SFa-3D-O8o"/>
+                            <constraint firstItem="Q82-na-bhY" firstAttribute="trailing" secondItem="rt6-8g-qqG" secondAttribute="trailing" constant="15" id="YTy-vK-OV5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Q82-na-bhY"/>
                     </view>
+                    <connections>
+                        <outlet property="btnIshiharaLayout" destination="rt6-8g-qqG" id="DcL-aX-o4P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZH-Ch-bwf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -39,6 +58,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="rectangle" catalog="system" width="64" height="46"/>
+        <image name="logoBCI" width="148.5" height="61.5"/>
     </resources>
 </document>

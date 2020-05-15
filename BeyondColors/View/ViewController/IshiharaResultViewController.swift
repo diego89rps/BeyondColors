@@ -13,6 +13,8 @@ class IshiharaResultViewController: UIViewController, Storyboarded {
     var vm : IshiharaTestViewModel?
     var answers : [String]?
     
+    @IBOutlet weak var btnMenuLayout: UIButton!
+    @IBOutlet weak var textResult: UITextView!
     @IBOutlet weak var result: UILabel!
     @IBAction func btnGoToMenu(_ sender: UIButton) {
         coordinator?.goToMainViewController()
@@ -20,9 +22,9 @@ class IshiharaResultViewController: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.result.text = "\(vm?.getListAnswers().count.description ?? "") de 17"
-        // Do any additional setup after loading the view.
+        self.btnMenuLayout.layer.cornerRadius = 14
+        self.result.text = "\(vm?.getListAnswers().count.description ?? "") de 15"
+        self.textResult.text = vm?.getTextResult()
     }
 
 }
