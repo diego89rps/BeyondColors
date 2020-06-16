@@ -13,6 +13,10 @@
 		9F92F70A246B8C5E001C88B2 /* Ishihara.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F92F709246B8C5E001C88B2 /* Ishihara.swift */; };
 		9F92F70D246BB700001C88B2 /* IshiharaResult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F92F70C246BB700001C88B2 /* IshiharaResult.storyboard */; };
 		9F92F70F246BB814001C88B2 /* IshiharaResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F92F70E246BB814001C88B2 /* IshiharaResultViewController.swift */; };
+		9FB1DCD22497FCDC002C6C20 /* Tips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB1DCD12497FCDC002C6C20 /* Tips.storyboard */; };
+		9FB1DCD42497FD17002C6C20 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1DCD32497FD17002C6C20 /* TipsViewController.swift */; };
+		9FB1DCD6249800A5002C6C20 /* ColorSecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1DCD5249800A5002C6C20 /* ColorSecViewController.swift */; };
+		9FB1DCD8249800FF002C6C20 /* ColorSec.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB1DCD7249800FF002C6C20 /* ColorSec.storyboard */; };
 		9FC287FD24694278000BBA34 /* IshiharaTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC287FC24694278000BBA34 /* IshiharaTestViewController.swift */; };
 		9FC950FF24669E9100E4F6BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC950FE24669E9100E4F6BE /* AppDelegate.swift */; };
 		9FC9510124669E9100E4F6BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC9510024669E9100E4F6BE /* SceneDelegate.swift */; };
@@ -34,6 +38,10 @@
 		9F92F709246B8C5E001C88B2 /* Ishihara.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ishihara.swift; sourceTree = "<group>"; };
 		9F92F70C246BB700001C88B2 /* IshiharaResult.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IshiharaResult.storyboard; sourceTree = "<group>"; };
 		9F92F70E246BB814001C88B2 /* IshiharaResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IshiharaResultViewController.swift; sourceTree = "<group>"; };
+		9FB1DCD12497FCDC002C6C20 /* Tips.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tips.storyboard; sourceTree = "<group>"; };
+		9FB1DCD32497FD17002C6C20 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
+		9FB1DCD5249800A5002C6C20 /* ColorSecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSecViewController.swift; sourceTree = "<group>"; };
+		9FB1DCD7249800FF002C6C20 /* ColorSec.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ColorSec.storyboard; sourceTree = "<group>"; };
 		9FC287FC24694278000BBA34 /* IshiharaTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IshiharaTestViewController.swift; sourceTree = "<group>"; };
 		9FC950FB24669E9100E4F6BE /* BeyondColors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeyondColors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC950FE24669E9100E4F6BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +94,8 @@
 				9FE2F798246A74ED00831E70 /* Main.storyboard */,
 				9FC9510424669E9100E4F6BE /* IshiharaTest.storyboard */,
 				9F92F70C246BB700001C88B2 /* IshiharaResult.storyboard */,
+				9FB1DCD12497FCDC002C6C20 /* Tips.storyboard */,
+				9FB1DCD7249800FF002C6C20 /* ColorSec.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -96,6 +106,8 @@
 				9FC9510224669E9100E4F6BE /* ViewController.swift */,
 				9FC287FC24694278000BBA34 /* IshiharaTestViewController.swift */,
 				9F92F70E246BB814001C88B2 /* IshiharaResultViewController.swift */,
+				9FB1DCD32497FD17002C6C20 /* TipsViewController.swift */,
+				9FB1DCD5249800A5002C6C20 /* ColorSecViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -201,7 +213,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB1DCD22497FCDC002C6C20 /* Tips.storyboard in Resources */,
 				9FC9510B24669E9800E4F6BE /* LaunchScreen.storyboard in Resources */,
+				9FB1DCD8249800FF002C6C20 /* ColorSec.storyboard in Resources */,
 				9FC9510824669E9800E4F6BE /* Assets.xcassets in Resources */,
 				9FC9510624669E9100E4F6BE /* IshiharaTest.storyboard in Resources */,
 				9FE2F799246A74ED00831E70 /* Main.storyboard in Resources */,
@@ -218,6 +232,7 @@
 			files = (
 				9FC9510324669E9100E4F6BE /* ViewController.swift in Sources */,
 				9F92F70F246BB814001C88B2 /* IshiharaResultViewController.swift in Sources */,
+				9FB1DCD42497FD17002C6C20 /* TipsViewController.swift in Sources */,
 				9FE2F79B246A7F4400831E70 /* Contents.swift in Sources */,
 				9F4C65022468F35D00046CCD /* Colors.swift in Sources */,
 				9FC287FD24694278000BBA34 /* IshiharaTestViewController.swift in Sources */,
@@ -227,6 +242,7 @@
 				9F92F708246B268B001C88B2 /* IshiharaTestViewModel.swift in Sources */,
 				9F92F70A246B8C5E001C88B2 /* Ishihara.swift in Sources */,
 				9FE2F793246A5BBF00831E70 /* Coordinator.swift in Sources */,
+				9FB1DCD6249800A5002C6C20 /* ColorSecViewController.swift in Sources */,
 				9FE2F797246A667900831E70 /* MainCoordinator.swift in Sources */,
 				9FE2F795246A617200831E70 /* Storyboarded.swift in Sources */,
 			);

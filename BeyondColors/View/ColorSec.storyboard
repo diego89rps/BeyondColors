@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Color Sec View Controller-->
+        <scene sceneID="Bc9-yU-AXu">
+            <objects>
+                <viewController storyboardIdentifier="ColorSec" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jtl-cC-cDA" customClass="ColorSecViewController" customModule="BeyondColors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UKN-6n-d5f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ga9-10-frF">
+                                <rect key="frame" x="57" y="134" width="300" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qbQ-H5-BEi">
+                                <rect key="frame" x="87" y="492" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Escolha as
+cores para pintar o 
+circulo na cor laranja</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hBe-P7-0Kv">
+                                <rect key="frame" x="20" y="582" width="374" height="140"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NSn-dT-Wlt">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qp-Bs-sqT">
+                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="60"/>
+                                                <state key="normal" title="Laranja">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="orangeAction" destination="jtl-cC-cDA" eventType="touchUpInside" id="WRO-lE-vAO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJr-Rh-zcT">
+                                                <rect key="frame" x="131.5" y="0.0" width="111" height="60"/>
+                                                <state key="normal" title="Verde">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="greenAction" destination="jtl-cC-cDA" eventType="touchUpInside" id="OqW-Wk-iDZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUb-9q-OAC">
+                                                <rect key="frame" x="262.5" y="0.0" width="111.5" height="60"/>
+                                                <state key="normal" title="Roxo">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="violetAction" destination="jtl-cC-cDA" eventType="touchUpInside" id="d8N-zg-M61"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="wQn-jU-eKN"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Hfp-ND-lzK">
+                                        <rect key="frame" x="0.0" y="80" width="374" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hog-qX-tql">
+                                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="vermelho"/>
+                                                <connections>
+                                                    <action selector="redAction" destination="jtl-cC-cDA" eventType="touchUpInside" id="OB4-gI-ci4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UV2-Xb-VsU">
+                                                <rect key="frame" x="131.5" y="0.0" width="111" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Amarelo"/>
+                                                <connections>
+                                                    <action selector="yellowAction" destination="jtl-cC-cDA" eventType="touchUpInside" id="odj-ME-xFn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFw-CF-Gbw">
+                                                <rect key="frame" x="262.5" y="0.0" width="111.5" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Azul"/>
+                                                <connections>
+                                                    <action selector="blueAction" destination="jtl-cC-cDA" eventType="touchUpInside" id="L84-qA-FOv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="ZPv-k9-BzK"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Hfp-ND-lzK" secondAttribute="trailing" id="Edw-PX-iZK"/>
+                                    <constraint firstItem="NSn-dT-Wlt" firstAttribute="leading" secondItem="hBe-P7-0Kv" secondAttribute="leading" id="Ro5-YD-S4Y"/>
+                                    <constraint firstItem="Hfp-ND-lzK" firstAttribute="leading" secondItem="hBe-P7-0Kv" secondAttribute="leading" id="a4H-zT-rtX"/>
+                                    <constraint firstAttribute="trailing" secondItem="NSn-dT-Wlt" secondAttribute="trailing" id="pIM-Ri-8gT"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3S8-9l-YCd" firstAttribute="bottom" secondItem="hBe-P7-0Kv" secondAttribute="bottom" constant="140" id="QMf-XX-ZeC"/>
+                            <constraint firstItem="hBe-P7-0Kv" firstAttribute="leading" secondItem="3S8-9l-YCd" secondAttribute="leading" constant="20" id="Y96-6Z-Vir"/>
+                            <constraint firstItem="3S8-9l-YCd" firstAttribute="trailing" secondItem="hBe-P7-0Kv" secondAttribute="trailing" constant="20" id="hMx-gA-4O1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3S8-9l-YCd"/>
+                    </view>
+                    <connections>
+                        <outlet property="CircleColor" destination="ga9-10-frF" id="I8k-3z-W7u"/>
+                        <outlet property="btnBlue" destination="YFw-CF-Gbw" id="DeF-qB-kfc"/>
+                        <outlet property="btnGreen" destination="iJr-Rh-zcT" id="uMt-Nr-yNS"/>
+                        <outlet property="btnOrange" destination="2qp-Bs-sqT" id="zoq-Jq-w0l"/>
+                        <outlet property="btnRed" destination="hog-qX-tql" id="9vo-zI-DqG"/>
+                        <outlet property="btnViolet" destination="cUb-9q-OAC" id="0A8-Ks-pQO"/>
+                        <outlet property="btnYellow" destination="UV2-Xb-VsU" id="XYy-u9-PHj"/>
+                        <outlet property="instructionsField" destination="qbQ-H5-BEi" id="bOV-st-WK5"/>
+                        <outlet property="stackBtnSec" destination="Hfp-ND-lzK" id="CXd-N2-0gR"/>
+                        <outlet property="stackBtnTer" destination="NSn-dT-Wlt" id="un6-g9-odV"/>
+                        <outlet property="stackDown" destination="QMf-XX-ZeC" id="14d-et-HBt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibr-ob-FhH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+</document>

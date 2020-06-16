@@ -11,13 +11,13 @@ import UIKit
 
 class ColorsViewModel {
     
-    func createColor(colorName : ColorName) -> UIColor{
-        let hexColor = colorType(colorBlindnessType: .tritanopia, colorName: colorName)
+    func createColor(colorBlindnessType : ColorBlindnessType, colorName : ColorName) -> UIColor{
+        let hexColor = colorType(colorBlindnessType: colorBlindnessType, colorName: colorName)
         guard let color =  UIColor(fromHexCode: hexColor) else { fatalError("Should return a color of \(hexColor)") }
         return color
     }
 
-    func colorType(colorBlindnessType : ColorBlindnessType, colorName : ColorName) -> String {
+    public func colorType(colorBlindnessType : ColorBlindnessType, colorName : ColorName) -> String {
         
         switch colorBlindnessType {
             case .protanopia:
