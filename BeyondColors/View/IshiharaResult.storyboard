@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,21 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNK-rR-DYj">
-                                <rect key="frame" x="15" y="652" width="384" height="60"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="N5V-A8-etd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Voltar ao Menu">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnGoToMenu:" destination="tiB-vY-T7b" eventType="touchUpInside" id="jaT-Hk-rvh"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="resposta" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1Q-FJ-jgF">
                                 <rect key="frame" x="40" y="414" width="334" height="150"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -60,16 +45,57 @@
                                     <constraint firstAttribute="height" constant="150" id="RK1-Ja-KW4"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aea-qL-EdK">
+                                <rect key="frame" x="15" y="602" width="384" height="140"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKc-0y-O1t">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="SVu-Di-5Q9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Dicas sobre Daltonismo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnGoToTips" destination="tiB-vY-T7b" eventType="touchUpInside" id="IPp-GJ-rWS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNK-rR-DYj">
+                                        <rect key="frame" x="0.0" y="80" width="384" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="N5V-A8-etd"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="xgp-Jq-fBZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Voltar ao Menu">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnGoToMenu:" destination="tiB-vY-T7b" eventType="touchUpInside" id="jaT-Hk-rvh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qNK-rR-DYj" firstAttribute="leading" secondItem="aea-qL-EdK" secondAttribute="leading" id="Ryc-yZ-Igt"/>
+                                    <constraint firstAttribute="trailing" secondItem="qNK-rR-DYj" secondAttribute="trailing" id="jiw-l8-lKm"/>
+                                    <constraint firstAttribute="trailing" secondItem="RKc-0y-O1t" secondAttribute="trailing" id="n9q-lg-zMa"/>
+                                    <constraint firstItem="RKc-0y-O1t" firstAttribute="leading" secondItem="aea-qL-EdK" secondAttribute="leading" id="noJ-k2-kcJ"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="aea-qL-EdK" firstAttribute="leading" secondItem="QfR-Qp-Zg2" secondAttribute="leading" constant="15" id="1ag-8F-Eet"/>
                             <constraint firstItem="QfR-Qp-Zg2" firstAttribute="trailing" secondItem="U9y-b0-F4G" secondAttribute="trailing" constant="20" id="45f-Tj-3jT"/>
-                            <constraint firstItem="QfR-Qp-Zg2" firstAttribute="trailing" secondItem="qNK-rR-DYj" secondAttribute="trailing" constant="15" id="CEt-cX-4wT"/>
+                            <constraint firstItem="QfR-Qp-Zg2" firstAttribute="bottom" secondItem="aea-qL-EdK" secondAttribute="bottom" constant="120" id="BrK-ex-u2k"/>
                             <constraint firstItem="v1Q-FJ-jgF" firstAttribute="leading" secondItem="QfR-Qp-Zg2" secondAttribute="leading" constant="40" id="HkX-vD-VkQ"/>
                             <constraint firstItem="QfR-Qp-Zg2" firstAttribute="trailing" secondItem="v1Q-FJ-jgF" secondAttribute="trailing" constant="40" id="Kly-1E-Cua"/>
-                            <constraint firstItem="qNK-rR-DYj" firstAttribute="leading" secondItem="QfR-Qp-Zg2" secondAttribute="leading" constant="15" id="YtE-MO-7I5"/>
+                            <constraint firstItem="QfR-Qp-Zg2" firstAttribute="trailing" secondItem="aea-qL-EdK" secondAttribute="trailing" constant="15" id="UHj-aq-9V4"/>
                             <constraint firstItem="U9y-b0-F4G" firstAttribute="leading" secondItem="QfR-Qp-Zg2" secondAttribute="leading" constant="20" id="hPG-8q-klh"/>
-                            <constraint firstItem="QfR-Qp-Zg2" firstAttribute="bottom" secondItem="qNK-rR-DYj" secondAttribute="bottom" constant="150" id="vOy-9Q-c5V"/>
                             <constraint firstItem="U9y-b0-F4G" firstAttribute="top" secondItem="QfR-Qp-Zg2" secondAttribute="top" constant="170" id="ve3-ht-8Z8"/>
                             <constraint firstItem="v1Q-FJ-jgF" firstAttribute="top" secondItem="U9y-b0-F4G" secondAttribute="bottom" constant="50" id="zX1-9s-q6i"/>
                         </constraints>
@@ -77,6 +103,7 @@
                     </view>
                     <connections>
                         <outlet property="btnMenuLayout" destination="qNK-rR-DYj" id="SvT-pj-q8I"/>
+                        <outlet property="btnTipsLayout" destination="RKc-0y-O1t" id="90h-Fg-9lE"/>
                         <outlet property="result" destination="ubF-j8-5yC" id="cLb-HQ-5Jx"/>
                         <outlet property="textResult" destination="v1Q-FJ-jgF" id="dRF-ul-Tx0"/>
                     </connections>

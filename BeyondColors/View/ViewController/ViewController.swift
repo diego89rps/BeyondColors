@@ -11,13 +11,23 @@ import UIKit
 class ViewController: UIViewController, Storyboarded {
     weak var coordinator: MainCoordinator?
     
+    @IBOutlet weak var btnColorLearningLayout: UIButton!
     @IBOutlet weak var btnIshiharaLayout: UIButton!
+    
+    @IBAction func btnColorLearning() {
+        coordinator?.goToColorSecViewController()
+    }
     @IBAction func btnIshiharaTest(_ sender: UIButton) {
         coordinator?.goToIshiharaViewController()
     }
-
+    @IBAction func btnTips() {
+        coordinator?.goToTipsViewController()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnColorLearningLayout.layer.cornerRadius = 14
+        btnColorLearningLayout.layer.borderWidth = 3
         btnIshiharaLayout.layer.cornerRadius = 14
     }
     

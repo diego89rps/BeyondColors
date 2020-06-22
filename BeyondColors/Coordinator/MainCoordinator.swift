@@ -18,8 +18,7 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-       // goToMainViewController()
-        goToColorSecViewController()
+        goToMainViewController()
     }
     
     func goToMainViewController() {
@@ -46,6 +45,13 @@ class MainCoordinator: Coordinator {
     
     func goToColorSecViewController() {
         let vc = ColorSecViewController.instantiate(Constants.Storyboard.ColorSecStoryboard, id: Constants.Id.ColorSec)
+        vc.coordinator = self
+        navigationController.isNavigationBarHidden = true
+        self.navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func goToTipsViewController() {
+        let vc = TipsViewController.instantiate(Constants.Storyboard.TipsStoryboard, id: Constants.Id.Tips)
         vc.coordinator = self
         navigationController.isNavigationBarHidden = true
         self.navigationController.pushViewController(vc, animated: true)

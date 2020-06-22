@@ -20,6 +20,7 @@ struct Constants {
         
         static let ColorSecStoryboard = "ColorSec"
         
+        static let TipsStoryboard = "Tips"
     }
     
 // swiftlint:disable type_name
@@ -32,6 +33,8 @@ struct Constants {
         static let ishiharaResult = "IshiharaResult"
         
         static let ColorSec = "ColorSec"
+        
+        static let Tips = "Tips"
 
     }
 }

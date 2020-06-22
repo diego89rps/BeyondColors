@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uW8-Ak-x5O">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uW8-Ak-x5O">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,40 +15,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rt6-8g-qqG">
-                                <rect key="frame" x="15" y="652" width="384" height="60"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="JNt-qv-0Eq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Iniciar Ishihara Teste">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnIshiharaTest:" destination="uW8-Ak-x5O" eventType="touchUpInside" id="HkN-2s-I6z"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoBCI" translatesAutoresizingMaskIntoConstraints="NO" id="SMc-tw-W0D">
                                 <rect key="frame" x="58" y="304" width="298" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="wUc-A3-vKN"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="A2g-t8-fgG">
+                                <rect key="frame" x="15" y="562" width="384" height="220"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rt6-8g-qqG">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="JNt-qv-0Eq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Iniciar Ishihara Teste">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnIshiharaTest:" destination="uW8-Ak-x5O" eventType="touchUpInside" id="HkN-2s-I6z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOq-ZR-4EE">
+                                        <rect key="frame" x="0.0" y="80" width="384" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="4Za-c2-e1k"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Iniciar Aprendizado das Cores">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnColorLearning" destination="uW8-Ak-x5O" eventType="touchUpInside" id="tpe-iH-QaM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKg-85-A6z">
+                                        <rect key="frame" x="0.0" y="160" width="384" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Ee1-Im-OY6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Dicas">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnTips" destination="uW8-Ak-x5O" eventType="touchUpInside" id="SS4-tk-sGn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TKg-85-A6z" firstAttribute="leading" secondItem="A2g-t8-fgG" secondAttribute="leading" id="H1j-ne-vSJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="TOq-ZR-4EE" secondAttribute="trailing" id="cJM-MD-rR5"/>
+                                    <constraint firstItem="TOq-ZR-4EE" firstAttribute="leading" secondItem="A2g-t8-fgG" secondAttribute="leading" id="sCc-GN-1dr"/>
+                                    <constraint firstAttribute="trailing" secondItem="TKg-85-A6z" secondAttribute="trailing" id="u21-9m-rf3"/>
+                                    <constraint firstItem="rt6-8g-qqG" firstAttribute="leading" secondItem="A2g-t8-fgG" secondAttribute="leading" id="vdw-af-viC"/>
+                                    <constraint firstAttribute="trailing" secondItem="rt6-8g-qqG" secondAttribute="trailing" id="xRa-9S-qvf"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rt6-8g-qqG" firstAttribute="leading" secondItem="Q82-na-bhY" secondAttribute="leading" constant="15" id="CZw-uA-0cW"/>
+                            <constraint firstItem="Q82-na-bhY" firstAttribute="trailing" secondItem="A2g-t8-fgG" secondAttribute="trailing" constant="15" id="3ch-zY-hah"/>
                             <constraint firstItem="Q82-na-bhY" firstAttribute="trailing" secondItem="SMc-tw-W0D" secondAttribute="trailing" constant="58" id="GL5-ai-Ufe"/>
-                            <constraint firstItem="Q82-na-bhY" firstAttribute="bottom" secondItem="rt6-8g-qqG" secondAttribute="bottom" constant="150" id="MJJ-6M-zGb"/>
                             <constraint firstItem="SMc-tw-W0D" firstAttribute="leading" secondItem="Q82-na-bhY" secondAttribute="leading" constant="58" id="Mvq-mN-XRH"/>
                             <constraint firstItem="SMc-tw-W0D" firstAttribute="top" secondItem="Q82-na-bhY" secondAttribute="top" constant="260" id="SFa-3D-O8o"/>
-                            <constraint firstItem="Q82-na-bhY" firstAttribute="trailing" secondItem="rt6-8g-qqG" secondAttribute="trailing" constant="15" id="YTy-vK-OV5"/>
+                            <constraint firstItem="A2g-t8-fgG" firstAttribute="leading" secondItem="Q82-na-bhY" secondAttribute="leading" constant="15" id="rEr-DM-0i6"/>
+                            <constraint firstItem="Q82-na-bhY" firstAttribute="bottom" secondItem="A2g-t8-fgG" secondAttribute="bottom" constant="80" id="vIh-GO-LHW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q82-na-bhY"/>
                     </view>
                     <connections>
+                        <outlet property="btnColorLearningLayout" destination="TOq-ZR-4EE" id="8PI-Gz-QvM"/>
                         <outlet property="btnIshiharaLayout" destination="rt6-8g-qqG" id="DcL-aX-o4P"/>
                     </connections>
                 </viewController>

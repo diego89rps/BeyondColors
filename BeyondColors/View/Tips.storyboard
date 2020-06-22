@@ -10,17 +10,81 @@
         <!--Tips View Controller-->
         <scene sceneID="V3G-ml-9ww">
             <objects>
-                <viewController id="ufW-AX-oyF" customClass="TipsViewController" customModule="BeyondColors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Tips" id="ufW-AX-oyF" customClass="TipsViewController" customModule="BeyondColors" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wO1-Lc-ItF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dicas para um melhor aprendizado de crianças com problemas de visão" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrb-bL-74f">
+                                <rect key="frame" x="20" y="104" width="374" height="90"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 - Dê preferencia a fontes sem serifa." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1u-tF-Rea">
+                                <rect key="frame" x="40" y="214" width="334" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="9xD-7c-Qwn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tip1v" translatesAutoresizingMaskIntoConstraints="NO" id="8mX-AV-DrH">
+                                <rect key="frame" x="40" y="495" width="334" height="173"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOu-mU-p1g">
+                                <rect key="frame" x="20" y="688" width="374" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="IaB-F6-5et"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Próxima Dica">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAction" destination="ufW-AX-oyF" eventType="touchUpInside" id="Y2F-5c-PIX"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tip1f" translatesAutoresizingMaskIntoConstraints="NO" id="LLp-kH-xfS">
+                                <rect key="frame" x="40" y="314" width="334" height="171"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="g1U-32-Vp8" firstAttribute="trailing" secondItem="8mX-AV-DrH" secondAttribute="trailing" constant="40" id="BpG-Pw-XAd"/>
+                            <constraint firstItem="8mX-AV-DrH" firstAttribute="top" secondItem="LLp-kH-xfS" secondAttribute="bottom" constant="10" id="Dnf-AK-Cnn"/>
+                            <constraint firstItem="g1U-32-Vp8" firstAttribute="trailing" secondItem="EOu-mU-p1g" secondAttribute="trailing" constant="20" id="Gzl-Wq-qZM"/>
+                            <constraint firstItem="u1u-tF-Rea" firstAttribute="leading" secondItem="g1U-32-Vp8" secondAttribute="leading" constant="40" id="IVb-F3-WJs"/>
+                            <constraint firstItem="g1U-32-Vp8" firstAttribute="trailing" secondItem="qrb-bL-74f" secondAttribute="trailing" constant="20" id="JtQ-i3-jBg"/>
+                            <constraint firstItem="8mX-AV-DrH" firstAttribute="leading" secondItem="g1U-32-Vp8" secondAttribute="leading" constant="40" id="MTM-W4-Y5S"/>
+                            <constraint firstItem="qrb-bL-74f" firstAttribute="leading" secondItem="g1U-32-Vp8" secondAttribute="leading" constant="20" id="Mhf-93-ejv"/>
+                            <constraint firstItem="LLp-kH-xfS" firstAttribute="top" secondItem="u1u-tF-Rea" secondAttribute="bottom" constant="20" id="UFS-Ld-m9M"/>
+                            <constraint firstItem="qrb-bL-74f" firstAttribute="top" secondItem="g1U-32-Vp8" secondAttribute="top" constant="60" id="abD-gC-aPT"/>
+                            <constraint firstItem="g1U-32-Vp8" firstAttribute="trailing" secondItem="u1u-tF-Rea" secondAttribute="trailing" constant="40" id="cOW-bp-xAy"/>
+                            <constraint firstItem="LLp-kH-xfS" firstAttribute="leading" secondItem="g1U-32-Vp8" secondAttribute="leading" constant="40" id="iaR-O2-qCD"/>
+                            <constraint firstItem="EOu-mU-p1g" firstAttribute="leading" secondItem="g1U-32-Vp8" secondAttribute="leading" constant="20" id="jdP-g8-PHW"/>
+                            <constraint firstItem="EOu-mU-p1g" firstAttribute="top" secondItem="8mX-AV-DrH" secondAttribute="bottom" constant="20" id="rAw-EH-pLj"/>
+                            <constraint firstItem="g1U-32-Vp8" firstAttribute="trailing" secondItem="LLp-kH-xfS" secondAttribute="trailing" constant="40" id="tZH-ma-Kzu"/>
+                            <constraint firstItem="u1u-tF-Rea" firstAttribute="top" secondItem="qrb-bL-74f" secondAttribute="bottom" constant="20" id="wbz-BM-o4j"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="g1U-32-Vp8"/>
                     </view>
+                    <connections>
+                        <outlet property="btnLayout" destination="EOu-mU-p1g" id="dVn-6J-GQR"/>
+                        <outlet property="descTip" destination="u1u-tF-Rea" id="yYI-4c-wkh"/>
+                        <outlet property="falseTip" destination="LLp-kH-xfS" id="HdG-5x-a4g"/>
+                        <outlet property="trueTip" destination="8mX-AV-DrH" id="uwU-kn-9nV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZp-hv-1m6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="81" y="110"/>
+            <point key="canvasLocation" x="79.710144927536234" y="109.82142857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Tip1f" width="289" height="171"/>
+        <image name="Tip1v" width="294" height="173"/>
+    </resources>
 </document>
