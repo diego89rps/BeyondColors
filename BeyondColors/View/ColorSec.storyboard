@@ -18,20 +18,18 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ga9-10-frF">
                                 <rect key="frame" x="57" y="134" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJo-Hm-SRm">
+                                        <rect key="frame" x="55" y="106" width="190" height="88"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qbQ-H5-BEi">
-                                <rect key="frame" x="87" y="492" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Escolha as
-cores para pintar o 
-circulo na cor laranja</string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hBe-P7-0Kv">
                                 <rect key="frame" x="20" y="582" width="374" height="140"/>
                                 <subviews>
@@ -113,6 +111,13 @@ circulo na cor laranja</string>
                                     <constraint firstAttribute="trailing" secondItem="NSn-dT-Wlt" secondAttribute="trailing" id="pIM-Ri-8gT"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytv-xr-ui1">
+                                <rect key="frame" x="57" y="472" width="300" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -130,7 +135,8 @@ circulo na cor laranja</string>
                         <outlet property="btnRed" destination="hog-qX-tql" id="9vo-zI-DqG"/>
                         <outlet property="btnViolet" destination="cUb-9q-OAC" id="0A8-Ks-pQO"/>
                         <outlet property="btnYellow" destination="UV2-Xb-VsU" id="XYy-u9-PHj"/>
-                        <outlet property="instructionsField" destination="qbQ-H5-BEi" id="bOV-st-WK5"/>
+                        <outlet property="instructField" destination="Ytv-xr-ui1" id="PTj-AH-dvH"/>
+                        <outlet property="resultAnswer" destination="JJo-Hm-SRm" id="tTl-5k-rO8"/>
                         <outlet property="stackBtnSec" destination="Hfp-ND-lzK" id="CXd-N2-0gR"/>
                         <outlet property="stackBtnTer" destination="NSn-dT-Wlt" id="un6-g9-odV"/>
                         <outlet property="stackDown" destination="QMf-XX-ZeC" id="14d-et-HBt"/>
