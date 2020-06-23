@@ -25,7 +25,7 @@ class MainCoordinator: Coordinator {
         let vc = ViewController.instantiate(Constants.Storyboard.mainStoryboard, id: Constants.Id.main)
         vc.coordinator = self
         navigationController.isNavigationBarHidden = true
-        navigationController.pushViewController(vc, animated: true)
+        navigationController.pushViewController(vc, animated: false)
     }
     
     func goToIshiharaViewController() {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -77,14 +77,28 @@
                                     <constraint firstAttribute="height" constant="60" id="TiZ-Q7-ZNy"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ade-Fh-jZ1">
+                                <rect key="frame" x="15" y="59" width="63.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Voltar" image="chevron.left" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtn" destination="3bN-uR-Plf" eventType="touchUpInside" id="Nxa-nc-OW4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Rl1-mG-j5q" firstAttribute="bottom" secondItem="XLo-RU-cOO" secondAttribute="bottom" constant="150" id="02t-xi-AEG"/>
+                            <constraint firstItem="Rl1-mG-j5q" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="XLo-RU-cOO" secondAttribute="bottom" constant="150" id="02t-xi-AEG"/>
                             <constraint firstItem="Rl1-mG-j5q" firstAttribute="trailing" secondItem="m6R-Ac-dY6" secondAttribute="trailing" constant="20" id="05R-hK-yBo"/>
+                            <constraint firstItem="ade-Fh-jZ1" firstAttribute="leading" secondItem="Rl1-mG-j5q" secondAttribute="leading" constant="15" id="1TL-Ws-6T9"/>
                             <constraint firstItem="f5Y-S0-6Je" firstAttribute="top" secondItem="m6R-Ac-dY6" secondAttribute="bottom" constant="40" id="529-TV-h9r"/>
                             <constraint firstItem="XLo-RU-cOO" firstAttribute="leading" secondItem="Rl1-mG-j5q" secondAttribute="leading" constant="35" id="7ru-b0-bu9"/>
+                            <constraint firstItem="ade-Fh-jZ1" firstAttribute="top" secondItem="Rl1-mG-j5q" secondAttribute="top" constant="15" id="QJi-pM-76M"/>
                             <constraint firstItem="Rl1-mG-j5q" firstAttribute="trailing" secondItem="XLo-RU-cOO" secondAttribute="trailing" constant="35" id="Vvl-Tf-4PS"/>
+                            <constraint firstItem="XLo-RU-cOO" firstAttribute="top" secondItem="f5Y-S0-6Je" secondAttribute="bottom" constant="33" id="acd-rH-PUg"/>
                             <constraint firstItem="m6R-Ac-dY6" firstAttribute="leading" secondItem="Rl1-mG-j5q" secondAttribute="leading" constant="20" id="dqe-19-gx4"/>
                             <constraint firstItem="f5Y-S0-6Je" firstAttribute="leading" secondItem="Rl1-mG-j5q" secondAttribute="leading" constant="40" id="k4t-tl-75h"/>
                             <constraint firstItem="m6R-Ac-dY6" firstAttribute="top" secondItem="Rl1-mG-j5q" secondAttribute="top" constant="110" id="lk1-CG-HHp"/>
@@ -107,6 +121,7 @@
     </scenes>
     <resources>
         <image name="Ishihara01" width="116.5" height="116.5"/>
-        <image name="rectangle" catalog="system" width="64" height="46"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="rectangle" catalog="system" width="128" height="93"/>
     </resources>
 </document>

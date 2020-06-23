@@ -35,12 +35,14 @@ class IshiharaTestViewController: UIViewController, Storyboarded {
         setPage(numPage: offSet)
     }
 
+    @IBAction func backBtn() {
+        coordinator?.goToMainViewController()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-            
             setPage(numPage: offSet)
     }
-    
+
     func setPage(numPage : Int){
 
         if numPage <= 14 {

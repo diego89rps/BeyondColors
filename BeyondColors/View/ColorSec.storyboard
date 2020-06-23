@@ -30,7 +30,7 @@
                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hBe-P7-0Kv">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hBe-P7-0Kv">
                                 <rect key="frame" x="20" y="582" width="374" height="140"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NSn-dT-Wlt">
@@ -111,19 +111,38 @@
                                     <constraint firstAttribute="trailing" secondItem="NSn-dT-Wlt" secondAttribute="trailing" id="pIM-Ri-8gT"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytv-xr-ui1">
-                                <rect key="frame" x="57" y="472" width="300" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytv-xr-ui1">
+                                <rect key="frame" x="40" y="461" width="334" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="D46-GM-Ch3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rg-Rb-uvl">
+                                <rect key="frame" x="15" y="59" width="63.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Voltar" image="chevron.left" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtn" destination="jtl-cC-cDA" eventType="touchUpInside" id="dsn-vK-EQc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="3S8-9l-YCd" firstAttribute="bottom" secondItem="hBe-P7-0Kv" secondAttribute="bottom" constant="140" id="QMf-XX-ZeC"/>
+                            <constraint firstItem="2Rg-Rb-uvl" firstAttribute="leading" secondItem="3S8-9l-YCd" secondAttribute="leading" constant="15" id="2Hy-UO-UuH"/>
+                            <constraint firstItem="Ytv-xr-ui1" firstAttribute="leading" secondItem="3S8-9l-YCd" secondAttribute="leading" constant="40" id="E8j-fy-r3p"/>
+                            <constraint firstItem="3S8-9l-YCd" firstAttribute="trailing" secondItem="Ytv-xr-ui1" secondAttribute="trailing" constant="40" id="K6p-lV-vKc"/>
+                            <constraint firstItem="3S8-9l-YCd" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="hBe-P7-0Kv" secondAttribute="bottom" constant="140" id="QMf-XX-ZeC"/>
                             <constraint firstItem="hBe-P7-0Kv" firstAttribute="leading" secondItem="3S8-9l-YCd" secondAttribute="leading" constant="20" id="Y96-6Z-Vir"/>
+                            <constraint firstItem="hBe-P7-0Kv" firstAttribute="top" secondItem="Ytv-xr-ui1" secondAttribute="bottom" constant="30" id="beX-Jc-gmy"/>
+                            <constraint firstItem="Ytv-xr-ui1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2Rg-Rb-uvl" secondAttribute="bottom" constant="375" id="bey-A2-w6x"/>
                             <constraint firstItem="3S8-9l-YCd" firstAttribute="trailing" secondItem="hBe-P7-0Kv" secondAttribute="trailing" constant="20" id="hMx-gA-4O1"/>
+                            <constraint firstItem="2Rg-Rb-uvl" firstAttribute="top" secondItem="3S8-9l-YCd" secondAttribute="top" constant="15" id="mc0-jR-ZW0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3S8-9l-YCd"/>
                     </view>
@@ -147,4 +166,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+    </resources>
 </document>

@@ -17,7 +17,7 @@ class ColorSecViewController: UIViewController, Storyboarded {
     var yellowBtn : Bool = false
     var orangeBtn : Bool = false
     var answer : Bool = false
-    let textA = "Escolha as cores para pintar o circulo na cor "
+    let textA = "Escolha duas cores para pintar o circulo na cor "
     let answersList : [Int] = [3, 7, 11, 4, 10, 2, 6, 12, 8]
     let challengeList : [String] = ["LARANJA", "ROXA", "VERDE", "VERMELHO-ALARANJADO","AZUL-ESVERDEADO","AMARELO-ALARANJADO","VERMELHO-ARROXEADO","AMARELO-ESVERDEADO", "AZUL-ARROXEADO"]
     
@@ -56,6 +56,10 @@ class ColorSecViewController: UIViewController, Storyboarded {
     }
     @IBAction func blueAction() {
         combineTest(value: 9)
+    }
+    
+    @IBAction func backBtn() {
+        coordinator?.goToMainViewController()
     }
     
     override func viewDidLoad() {

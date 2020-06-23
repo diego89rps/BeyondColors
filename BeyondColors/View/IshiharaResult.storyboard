@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="resposta" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1Q-FJ-jgF">
-                                <rect key="frame" x="40" y="414" width="334" height="150"/>
+                                <rect key="frame" x="40" y="394" width="334" height="150"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Ogw-Tn-Q1m"/>
@@ -26,7 +26,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="U9y-b0-F4G">
-                                <rect key="frame" x="20" y="214" width="374" height="150"/>
+                                <rect key="frame" x="20" y="194" width="374" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você acertou:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bH1-lf-0fr">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
@@ -46,10 +46,10 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aea-qL-EdK">
-                                <rect key="frame" x="15" y="602" width="384" height="140"/>
+                                <rect key="frame" x="15" y="582" width="384" height="160"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKc-0y-O1t">
-                                        <rect key="frame" x="0.0" y="0.0" width="384" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="70"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="SVu-Di-5Q9"/>
@@ -63,7 +63,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNK-rR-DYj">
-                                        <rect key="frame" x="0.0" y="80" width="384" height="60"/>
+                                        <rect key="frame" x="0.0" y="90" width="384" height="70"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="N5V-A8-etd"/>
@@ -91,12 +91,13 @@
                         <constraints>
                             <constraint firstItem="aea-qL-EdK" firstAttribute="leading" secondItem="QfR-Qp-Zg2" secondAttribute="leading" constant="15" id="1ag-8F-Eet"/>
                             <constraint firstItem="QfR-Qp-Zg2" firstAttribute="trailing" secondItem="U9y-b0-F4G" secondAttribute="trailing" constant="20" id="45f-Tj-3jT"/>
-                            <constraint firstItem="QfR-Qp-Zg2" firstAttribute="bottom" secondItem="aea-qL-EdK" secondAttribute="bottom" constant="120" id="BrK-ex-u2k"/>
+                            <constraint firstItem="QfR-Qp-Zg2" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="aea-qL-EdK" secondAttribute="bottom" constant="120" id="BrK-ex-u2k"/>
                             <constraint firstItem="v1Q-FJ-jgF" firstAttribute="leading" secondItem="QfR-Qp-Zg2" secondAttribute="leading" constant="40" id="HkX-vD-VkQ"/>
                             <constraint firstItem="QfR-Qp-Zg2" firstAttribute="trailing" secondItem="v1Q-FJ-jgF" secondAttribute="trailing" constant="40" id="Kly-1E-Cua"/>
                             <constraint firstItem="QfR-Qp-Zg2" firstAttribute="trailing" secondItem="aea-qL-EdK" secondAttribute="trailing" constant="15" id="UHj-aq-9V4"/>
                             <constraint firstItem="U9y-b0-F4G" firstAttribute="leading" secondItem="QfR-Qp-Zg2" secondAttribute="leading" constant="20" id="hPG-8q-klh"/>
-                            <constraint firstItem="U9y-b0-F4G" firstAttribute="top" secondItem="QfR-Qp-Zg2" secondAttribute="top" constant="170" id="ve3-ht-8Z8"/>
+                            <constraint firstItem="U9y-b0-F4G" firstAttribute="top" secondItem="QfR-Qp-Zg2" secondAttribute="top" constant="150" id="ve3-ht-8Z8"/>
+                            <constraint firstItem="aea-qL-EdK" firstAttribute="top" secondItem="v1Q-FJ-jgF" secondAttribute="bottom" constant="38" id="xDS-uj-Zsg"/>
                             <constraint firstItem="v1Q-FJ-jgF" firstAttribute="top" secondItem="U9y-b0-F4G" secondAttribute="bottom" constant="50" id="zX1-9s-q6i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QfR-Qp-Zg2"/>

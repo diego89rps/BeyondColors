@@ -15,13 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoBCI" translatesAutoresizingMaskIntoConstraints="NO" id="SMc-tw-W0D">
-                                <rect key="frame" x="58" y="304" width="298" height="125"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NewLogo" translatesAutoresizingMaskIntoConstraints="NO" id="SMc-tw-W0D">
+                                <rect key="frame" x="80" y="124" width="254" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="wUc-A3-vKN"/>
+                                    <constraint firstAttribute="height" constant="250" id="UEH-rZ-8Qs"/>
+                                    <constraint firstAttribute="width" constant="250" id="v4K-3q-cjk"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="A2g-t8-fgG">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="A2g-t8-fgG">
                                 <rect key="frame" x="15" y="562" width="384" height="220"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rt6-8g-qqG">
@@ -32,7 +33,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Iniciar Ishihara Teste">
+                                        <state key="normal" title="Iniciar Teste de Ishihara">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -77,15 +78,26 @@
                                     <constraint firstAttribute="trailing" secondItem="rt6-8g-qqG" secondAttribute="trailing" id="xRa-9S-qvf"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="i3n-VT-MeF">
+                                <rect key="frame" x="80" y="397" width="254" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="Esb-0g-xs3"/>
+                                    <constraint firstAttribute="width" constant="240" id="TFj-G6-nVO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Q82-na-bhY" firstAttribute="trailing" secondItem="A2g-t8-fgG" secondAttribute="trailing" constant="15" id="3ch-zY-hah"/>
-                            <constraint firstItem="Q82-na-bhY" firstAttribute="trailing" secondItem="SMc-tw-W0D" secondAttribute="trailing" constant="58" id="GL5-ai-Ufe"/>
-                            <constraint firstItem="SMc-tw-W0D" firstAttribute="leading" secondItem="Q82-na-bhY" secondAttribute="leading" constant="58" id="Mvq-mN-XRH"/>
-                            <constraint firstItem="SMc-tw-W0D" firstAttribute="top" secondItem="Q82-na-bhY" secondAttribute="top" constant="260" id="SFa-3D-O8o"/>
+                            <constraint firstItem="Q82-na-bhY" firstAttribute="trailing" secondItem="i3n-VT-MeF" secondAttribute="trailing" constant="80" id="7R2-XU-kNe"/>
+                            <constraint firstItem="i3n-VT-MeF" firstAttribute="top" secondItem="SMc-tw-W0D" secondAttribute="bottom" constant="23" id="HA7-QU-ve9"/>
+                            <constraint firstItem="Q82-na-bhY" firstAttribute="trailing" secondItem="SMc-tw-W0D" secondAttribute="trailing" constant="80" id="Mhz-Dr-X3K"/>
+                            <constraint firstItem="A2g-t8-fgG" firstAttribute="top" relation="lessThanOrEqual" secondItem="i3n-VT-MeF" secondAttribute="bottom" constant="133" id="Srn-ar-lCS"/>
+                            <constraint firstItem="SMc-tw-W0D" firstAttribute="top" secondItem="Q82-na-bhY" secondAttribute="top" constant="80" id="eT1-9Z-qhS"/>
+                            <constraint firstItem="SMc-tw-W0D" firstAttribute="leading" secondItem="Q82-na-bhY" secondAttribute="leading" constant="80" id="oBd-cQ-bhb"/>
                             <constraint firstItem="A2g-t8-fgG" firstAttribute="leading" secondItem="Q82-na-bhY" secondAttribute="leading" constant="15" id="rEr-DM-0i6"/>
-                            <constraint firstItem="Q82-na-bhY" firstAttribute="bottom" secondItem="A2g-t8-fgG" secondAttribute="bottom" constant="80" id="vIh-GO-LHW"/>
+                            <constraint firstItem="i3n-VT-MeF" firstAttribute="leading" secondItem="Q82-na-bhY" secondAttribute="leading" constant="80" id="rx6-iK-xB6"/>
+                            <constraint firstItem="Q82-na-bhY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="A2g-t8-fgG" secondAttribute="bottom" constant="80" id="vIh-GO-LHW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q82-na-bhY"/>
                     </view>
@@ -100,6 +112,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logoBCI" width="148.5" height="61.5"/>
+        <image name="Image" width="149" height="23"/>
+        <image name="NewLogo" width="512" height="512"/>
     </resources>
 </document>
