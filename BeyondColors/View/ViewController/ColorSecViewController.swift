@@ -74,7 +74,6 @@ class ColorSecViewController: UIViewController, Storyboarded {
         let description = changeTextColor(message: NSMutableAttributedString(string: "\(textA)\(challengeList[gameState])"), location: textA.count, length: challengeList[gameState].count, color: (self.c?.createColor(colorBlindnessType: .noType, colorName: .Orange))!)
         
         instructField.attributedText = description
-        
     }
 
     func combineTest(value: Int){
